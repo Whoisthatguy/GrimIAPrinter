@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IADbModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\Markus\AppData\Local\EvilSoft\IAGD\data\userdataTest.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PlayerItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" Nullable="false" />
+          <Property Name="baserecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="PrefixRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="SuffixRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ModifierRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TransmuteRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Seed" Type="integer" />
+          <Property Name="MateriaRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="RelicCompletionBonusRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="RelicSeed" Type="integer" />
+          <Property Name="EnchantmentRecord" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="PrefixRarity" Type="int" />
+          <Property Name="UNKNOWN" Type="integer" />
+          <Property Name="EnchantmentSeed" Type="integer" />
+          <Property Name="MateriaCombines" Type="integer" />
+          <Property Name="StackCount" Type="integer" />
+          <Property Name="Name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="namelowercase" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Rarity" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="LevelRequirement" Type="real" />
+          <Property Name="Mod" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="IsHardcore" Type="bit" />
+          <Property Name="azpartition_v2" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="azuuid_v2" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="created_at" Type="integer" />
+        </EntityType>
+        <EntityContainer Name="IADbModelStoreContainer">
+          <EntitySet Name="PlayerItem" EntityType="Self.PlayerItem" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IADbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PlayerItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="baserecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="PrefixRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="SuffixRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ModifierRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TransmuteRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Seed" Type="Int64" />
+          <Property Name="MateriaRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="RelicCompletionBonusRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="RelicSeed" Type="Int64" />
+          <Property Name="EnchantmentRecord" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="PrefixRarity" Type="Int32" />
+          <Property Name="UNKNOWN" Type="Int64" />
+          <Property Name="EnchantmentSeed" Type="Int64" />
+          <Property Name="MateriaCombines" Type="Int64" />
+          <Property Name="StackCount" Type="Int64" />
+          <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="namelowercase" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Rarity" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="LevelRequirement" Type="Double" />
+          <Property Name="Mod" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="IsHardcore" Type="Boolean" />
+          <Property Name="azpartition_v2" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="azuuid_v2" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="Int64" />
+        </EntityType>
+        <EntityContainer Name="iaDb" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PlayerItem" EntityType="Self.PlayerItem" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IADbModelStoreContainer" CdmEntityContainer="iaDb">
+          <EntitySetMapping Name="PlayerItem">
+            <EntityTypeMapping TypeName="IADbModel.PlayerItem">
+              <MappingFragment StoreEntitySet="PlayerItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="baserecord" ColumnName="baserecord" />
+                <ScalarProperty Name="PrefixRecord" ColumnName="PrefixRecord" />
+                <ScalarProperty Name="SuffixRecord" ColumnName="SuffixRecord" />
+                <ScalarProperty Name="ModifierRecord" ColumnName="ModifierRecord" />
+                <ScalarProperty Name="TransmuteRecord" ColumnName="TransmuteRecord" />
+                <ScalarProperty Name="Seed" ColumnName="Seed" />
+                <ScalarProperty Name="MateriaRecord" ColumnName="MateriaRecord" />
+                <ScalarProperty Name="RelicCompletionBonusRecord" ColumnName="RelicCompletionBonusRecord" />
+                <ScalarProperty Name="RelicSeed" ColumnName="RelicSeed" />
+                <ScalarProperty Name="EnchantmentRecord" ColumnName="EnchantmentRecord" />
+                <ScalarProperty Name="PrefixRarity" ColumnName="PrefixRarity" />
+                <ScalarProperty Name="UNKNOWN" ColumnName="UNKNOWN" />
+                <ScalarProperty Name="EnchantmentSeed" ColumnName="EnchantmentSeed" />
+                <ScalarProperty Name="MateriaCombines" ColumnName="MateriaCombines" />
+                <ScalarProperty Name="StackCount" ColumnName="StackCount" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="namelowercase" ColumnName="namelowercase" />
+                <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+                <ScalarProperty Name="LevelRequirement" ColumnName="LevelRequirement" />
+                <ScalarProperty Name="Mod" ColumnName="Mod" />
+                <ScalarProperty Name="IsHardcore" ColumnName="IsHardcore" />
+                <ScalarProperty Name="azpartition_v2" ColumnName="azpartition_v2" />
+                <ScalarProperty Name="azuuid_v2" ColumnName="azuuid_v2" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
