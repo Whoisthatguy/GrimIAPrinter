@@ -1,0 +1,7 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// The author licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
+extensions:  .xml .config .xsd
+<!-- The author licenses this file to you under the MIT license. -->
+<!-- See the LICENSE file in the project root for more information. -->

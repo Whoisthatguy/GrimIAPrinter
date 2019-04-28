@@ -104,6 +104,7 @@
     <None Include="IADb.edmx.diagram">
       <DependentUpon>IADb.edmx</DependentUpon>
     </None>
+    <None Include="IAPrinter.licenseheader" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
