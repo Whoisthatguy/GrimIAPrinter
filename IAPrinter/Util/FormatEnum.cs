@@ -1,5 +1,7 @@
 ﻿// The author licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
+using System;
+
 namespace IAPrinter.Util
 {
 	public enum FormatEnum
@@ -14,7 +16,7 @@ namespace IAPrinter.Util
 	{
 		public static FormatEnum StringToFormatEnum(string input)
 		{
-			if (string.IsNullOrWhiteSpace(input))
+			if (String.IsNullOrWhiteSpace(input))
 				return FormatEnum.PlainText;
 			switch (input.Trim().ToLower())
 			{

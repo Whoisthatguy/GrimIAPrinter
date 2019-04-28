@@ -188,8 +188,7 @@ namespace IAPrinter.Util
 
 							if (rarityFirst)
 							{
-								result.AddAttribute(HtmlTextWriterAttribute.Class, $"rarity rarity{rarity.ToString()}");
-								
+								result.AddAttribute(HtmlTextWriterAttribute.Class, $"rarity rarity{rarity.ToString()}");							
 								result.RenderBeginTag(HtmlTextWriterTag.Div);
 								result.RenderBeginTag(HtmlTextWriterTag.H3);
 								result.Write(rarity.ToString());
@@ -261,7 +260,7 @@ namespace IAPrinter.Util
 			int hoverSpace = 5;
 			Int32.TryParse(System.Configuration.ConfigurationManager.AppSettings["HoverSpace"], out hoverSpace);
 			int itemTypeColumnWidth = 300;
-			Int32.TryParse(System.Configuration.ConfigurationManager.AppSettings["HoverSpace"], out hoverSpace);
+			Int32.TryParse(System.Configuration.ConfigurationManager.AppSettings["ItemTypeColumnWidth"], out itemTypeColumnWidth);
 
 			writer.WriteLine($".grimIAPrinterResultHtml {{ background-color: {backgroundColor}; }}");
 			writer.WriteLine(".grimIAPrinterResultBody { margin: 0px; }");

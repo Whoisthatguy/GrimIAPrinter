@@ -19,7 +19,7 @@ namespace IAPrinter.Util
 		{
 			if (String.IsNullOrWhiteSpace(input))
 				return RarityEnum.Purple;
-			switch (input.ToLower())
+			switch (input.Trim().ToLower())
 			{
 				case "purple":
 					return RarityEnum.Purple;
